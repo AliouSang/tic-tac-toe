@@ -8,6 +8,45 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  
+  <main class="game">
+    <header class="game-header">
+      <p class="eyebrow">THE CLASSIC GAME</p>
+      <h1>Tic Tac Toe</h1>
+      <p class="subtitle">Three in a row wins the game.</p>
+    </header>
+
+    <form id="player-form" class="player-form">
+      <div class="player-input">
+        <label for="player-one">Player 1 . X</label>
+        <input id="player-one" type="text" name="playerOne" placeholder="Player One" maxlength="20" autocomplete="off" required>
+      </div>
+      <div class="player-input">
+        <label for="player-two">Player 2 . O</label>
+        <input id="player-two" type="text" name="playerTwo" placeholder="Player Two" maxlength="20" autocomplete="off" required>
+      </div>  
+      
+      <button class="start-button" type="submit">Start game</button>
+    </form>
+
+    <section class="game-panel" aria-label="Game area">
+      <div class="game-info">
+        <div>
+          <p class="section-label">CURRENT GAME</p>
+          <h2 id="game-status" aria-live="polite">Enter player names to begin</h2>
+        </div>
+        <span id="turn-badge" class="turn-badge">—</span>
+      </div>
+
+      <div id="gameboard" class="gameboard" role="group" aria-label="Tic Tac Toe board"></div>
+    
+      <div class="game-footer">
+        <p id="game-message" aria-live="polite">Each player takes a turn.</p>
+      </div>
+
+      <button id="restart-button" class="restart-button" type="button" disabled>Restart game</button>
+    </section>
+
+    <footer>Built with HTML, CSS and JavaScript.</footer>
+  </main>
 </body>
 </html>
